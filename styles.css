@@ -787,6 +787,9 @@ h6 {
     padding: 32px 24px;
     text-align: center;
     transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .team-card:hover {
@@ -839,6 +842,27 @@ h6 {
     color: var(--primary-color);
     font-size: 14px;
     font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.btn-linkedin {
+    display: inline-block;
+    margin-top: auto;
+    padding: 8px 16px;
+    background: rgba(10, 102, 194, 0.1);
+    color: #0a66c2;
+    border: 1px solid rgba(10, 102, 194, 0.2);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.btn-linkedin:hover {
+    background: rgba(10, 102, 194, 0.2);
+    color: #fff;
+    border-color: #0a66c2;
 }
 
 /* Footer */
