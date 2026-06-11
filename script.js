@@ -53,6 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth'
                 });
             }
+
+            // Cerrar el menú en móviles al hacer clic en un enlace
+            const navLinksContainer = document.querySelector('.nav-links');
+            if (window.innerWidth <= 768) {
+                navLinksContainer.style.display = 'none';
+            }
         });
     });
 
@@ -75,6 +81,24 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinksContainer.style.backdropFilter = 'blur(16px)';
             navLinksContainer.style.padding = '24px';
             navLinksContainer.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
+        }
+    });
+
+    // Ensure desktop menu reappears if window is resized
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navLinksContainer.style.display = '';
+            navLinksContainer.style.flexDirection = '';
+            navLinksContainer.style.position = '';
+            navLinksContainer.style.top = '';
+            navLinksContainer.style.left = '';
+            navLinksContainer.style.width = '';
+            navLinksContainer.style.background = '';
+            navLinksContainer.style.backdropFilter = '';
+            navLinksContainer.style.padding = '';
+            navLinksContainer.style.borderBottom = '';
+        } else if (navLinksContainer.style.display !== 'flex') {
+            navLinksContainer.style.display = 'none';
         }
     });
 });
