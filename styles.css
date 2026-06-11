@@ -937,13 +937,19 @@ footer p {
         margin-bottom: 16px;
     }
 
+    .deliverables-table th:nth-child(2),
+    .deliverables-table td:nth-child(2) {
+        display: none;
+    }
+
     .deliverables-table th:nth-child(3),
     .deliverables-table td:nth-child(3) {
         display: none;
     }
 
     #cliente {
-        background-image: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0) 60%);
+        background-image: none;
+        background-color: rgba(15, 23, 42);
         background-color: var(--bg-dark);
     }
 
