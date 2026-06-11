@@ -928,4 +928,30 @@ footer p {
     .deliverables-table td {
         padding: 12px 10px;
     }
+
+    .scenario-badge {
+        position: relative;
+        top: auto;
+        right: auto;
+        display: inline-block;
+        margin-bottom: 16px;
+    }
+
+    .deliverables-table th:nth-child(3),
+    .deliverables-table td:nth-child(3) {
+        display: none;
+    }
+
+    #cliente {
+        background-image: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0) 60%);
+        background-color: var(--bg-dark);
+    }
+
+    #cliente::before {
+        display: none;
+    }
+
+    .lead-text {
+        text-align: center;
+    }
 }
