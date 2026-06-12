@@ -77,10 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinksContainer.style.top = '100%';
             navLinksContainer.style.left = '0';
             navLinksContainer.style.width = '100%';
-            navLinksContainer.style.background = 'rgba(15, 23, 42, 0.95)';
+            navLinksContainer.style.background = 'rgba(255, 255, 255, 0.95)';
             navLinksContainer.style.backdropFilter = 'blur(16px)';
             navLinksContainer.style.padding = '24px';
-            navLinksContainer.style.borderBottom = '1px solid rgba(255, 255, 255, 0.08)';
+            navLinksContainer.style.borderBottom = '1px solid rgba(0, 0, 0, 0.08)';
         }
     });
 
