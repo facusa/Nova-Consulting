@@ -416,9 +416,44 @@ h6 {
 
 .mv-card {
     padding: 24px;
-    background: rgba(0, 0, 0, 0.03);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.mv-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.mv-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.mv-card:hover::before {
+    transform: scaleX(1);
+}
+
+.mv-card h2 {
+    transition: transform 0.4s ease;
+}
+
+.mv-card:hover h2 {
+    transform: scale(1.1);
 }
 
 .mv-icon {
@@ -442,15 +477,25 @@ h6 {
     color: var(--text-muted);
 }
 
-/* 3. Solución */
+/* 3. Solución y Servicios */
 .solution-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
 }
 
 .solution-card {
-    padding: 48px;
+    padding: 48px 32px;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 1;
+}
+
+.solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(16, 185, 129, 0.2);
 }
 
 .main-goal {
@@ -470,6 +515,12 @@ h6 {
     justify-content: center;
     margin-bottom: 24px;
     box-shadow: 0 10px 25px var(--primary-glow);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.solution-card:hover .solution-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
 }
 
 .main-goal h3 {
@@ -581,6 +632,7 @@ h6 {
     padding: 32px;
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
 }
 
 .ma-right {

@@ -101,4 +101,48 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinksContainer.style.display = 'none';
         }
     });
+    
+    // 6. Number Counter Animation for Impact Section
+    const statsSection = document.getElementById('estadisticas');
+    if (statsSection) {
+        const counters = statsSection.querySelectorAll('.mv-card h2');
+        
+        const counterData = [];
+        counters.forEach(counter => {
+            const originalText = counter.innerText;
+            const targetValue = parseInt(originalText.replace(/[^0-9]/g, ''));
+            const prefix = originalText.replace(/[0-9].*/, '');
+            const suffix = originalText.replace(/.*[0-9]/, '');
+            
+            counterData.push({ element: counter, target: targetValue, prefix, suffix });
+            counter.innerText = `${prefix}0${suffix}`;
+        });
+
+        const animateCounters = () => {
+            counterData.forEach(data => {
+                const updateCount = () => {
+                    const currentStr = data.element.innerText.replace(/[^0-9]/g, '');
+                    const current = currentStr === '' ? 0 : parseInt(currentStr);
+                    const increment = data.target / 30; // 30 steps
+                    
+                    if (current < data.target) {
+                        data.element.innerText = `${data.prefix}${Math.ceil(current + increment)}${data.suffix}`;
+                        setTimeout(updateCount, 40);
+                    } else {
+                        data.element.innerText = `${data.prefix}${data.target}${data.suffix}`;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                animateCounters();
+                observer.disconnect();
+            }
+        }, { threshold: 0.5 });
+
+        observer.observe(statsSection);
+    }
 });
