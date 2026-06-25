@@ -1200,6 +1200,7 @@ footer p {
     font-family: inherit;
     font-size: 15px;
     transition: var(--transition-fast);
+    text-align: left;
 }
 
 .accordion-header:hover {
