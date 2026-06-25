@@ -647,6 +647,17 @@ h6 {
     justify-content: center;
 }
 
+.nova-sol-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.nova-sol-card--full {
+    grid-column: span 2;
+}
+
 .nova-sol-card {
     background: rgba(16, 185, 129, 0.06);
     border: 1px solid rgba(16, 185, 129, 0.2);
@@ -1156,7 +1167,15 @@ footer p {
         transform: none;
     }
 
-    .nova-sol-card[style*="span 2"] {
+    .nova-sol-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nova-sol-card--full {
         grid-column: span 1;
+    }
+
+    .ma-right {
+        padding: 48px 16px 24px !important;
     }
 }
