@@ -1077,4 +1077,17 @@ footer p {
     #cliente .section-title {
         color: var(--text-main);
     }
+
+    .stages-container {
+        padding: 40px 16px 24px !important;
+        overflow: hidden;
+    }
+
+    .stages-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .stage-card:hover {
+        transform: none;
+    }
 }
