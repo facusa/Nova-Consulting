@@ -647,6 +647,71 @@ h6 {
     justify-content: center;
 }
 
+.nova-sol-card {
+    background: rgba(16, 185, 129, 0.06);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.nova-sol-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.5);
+}
+
+.nova-sol-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+    box-shadow: 0 6px 14px rgba(16, 185, 129, 0.3);
+}
+
+.nova-sol-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.nova-sol-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.nova-sol-result {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 24px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+    border: 1px solid rgba(16, 185, 129, 0.35);
+    border-radius: 10px;
+    color: var(--text-main);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.nova-sol-result svg {
+    color: var(--primary-color);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.nova-sol-result strong {
+    color: var(--primary-color);
+}
+
 .stage-card:hover {
     transform: translateX(8px);
     background: rgba(16, 185, 129, 0.05) !important;
@@ -1089,5 +1154,9 @@ footer p {
 
     .stage-card:hover {
         transform: none;
+    }
+
+    .nova-sol-card[style*="span 2"] {
+        grid-column: span 1;
     }
 }
