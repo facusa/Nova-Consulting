@@ -647,6 +647,11 @@ h6 {
     justify-content: center;
 }
 
+.stage-card:hover {
+    transform: translateX(8px);
+    background: rgba(16, 185, 129, 0.05) !important;
+}
+
 .ma-badge {
     position: absolute;
     top: -20px;
