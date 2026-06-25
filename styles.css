@@ -1079,8 +1079,8 @@ footer p {
     }
 
     .stages-container {
-        padding: 40px 16px 24px !important;
-        overflow: hidden;
+        padding: 50px 16px 24px !important;
+        overflow: visible !important;
     }
 
     .stages-grid {
