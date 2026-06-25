@@ -145,4 +145,69 @@ document.addEventListener('DOMContentLoaded', () => {
 
         observer.observe(statsSection);
     }
+
+    // 7. Acceso Restringido al Repositorio
+    const btnOpenRepo = document.getElementById('btn-login-repo');
+    const modal = document.getElementById('login-modal');
+    const btnCloseModal = document.getElementById('close-modal');
+    const btnSubmit = document.getElementById('btn-submit-login');
+    const inputUser = document.getElementById('repo-user');
+    const inputPass = document.getElementById('repo-pass');
+    const errorMsg = document.getElementById('login-error');
+    const repoSection = document.getElementById('entregables');
+    const accessSection = document.getElementById('repo-acceso');
+
+    if (btnOpenRepo && modal) {
+        btnOpenRepo.addEventListener('click', () => {
+            modal.style.display = 'flex';
+            inputUser.value = '';
+            inputPass.value = '';
+            errorMsg.style.display = 'none';
+        });
+
+        btnCloseModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Cerrar al hacer clic fuera del modal
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        const checkLogin = () => {
+            const user = inputUser.value.trim().toLowerCase();
+            const pass = inputPass.value.trim();
+
+            if (user === 'leomessi' && pass === 'francia2do') {
+                modal.style.display = 'none';
+                accessSection.style.display = 'none'; // ocultar boton de acceso
+                repoSection.style.display = 'block'; // mostrar repositorio
+                
+                // Hacer scroll suave hacia el repositorio
+                setTimeout(() => {
+                    const navHeight = document.getElementById('navbar').offsetHeight;
+                    const targetPosition = repoSection.getBoundingClientRect().top + window.scrollY - navHeight;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }, 100);
+            } else {
+                errorMsg.style.display = 'block';
+            }
+        };
+
+        btnSubmit.addEventListener('click', checkLogin);
+
+        // Permitir login con la tecla Enter
+        inputPass.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                checkLogin();
+            }
+        });
+        inputUser.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                checkLogin();
+            }
+        });
+    }
 });
