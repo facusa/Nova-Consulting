@@ -1262,3 +1262,262 @@ footer p {
     flex-grow: 1;
     font-weight: 500;
 }
+
+/* --- ESTILOS PARA STORYTELLING (CASOS DE ÉXITO) --- */
+
+.story-container {
+    padding: 40px;
+    background: #ffffff;
+}
+
+.story-block {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.story-block.center-block {
+    flex-direction: column;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text h3 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    margin-top: 12px;
+}
+
+.story-text p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.story-list {
+    list-style: none;
+    padding: 0;
+}
+
+.story-list li {
+    background: rgba(16, 185, 129, 0.05);
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.story-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-logo-large {
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.story-divider {
+    border: 0;
+    height: 1px;
+    background: var(--glass-border);
+    margin: 40px 0;
+}
+
+/* Arquitectura Comparativa */
+.architecture-comparison {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.arch-card {
+    background: var(--bg-light);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+}
+
+.arch-card h4 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.arch-placeholder {
+    background: #e2e8f0;
+    color: #94a3b8;
+    border-radius: 8px;
+    border: 2px dashed #cbd5e1;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.arch-placeholder img {
+    max-width: 900px;
+}
+
+/* RFP Stats */
+.story-rfp-stats {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+}
+
+.rfp-winner,
+.rfp-loser {
+    flex: 1;
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.rfp-winner {
+    background: rgba(16, 185, 129, 0.1);
+    border: 2px solid var(--primary-color);
+}
+
+.rfp-loser {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    opacity: 0.8;
+}
+
+.rfp-winner h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.rfp-loser h4 {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.score {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+/* Responsive para el Storytelling */
+@media (max-width: 768px) {
+
+    .story-block,
+    .story-block.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .story-list li {
+        text-align: left;
+    }
+
+    .story-rfp-stats {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* Arquitectura Comparativa (Lado a Lado) */
+.architecture-comparison {
+    display: flex;
+    flex-direction: row;
+    /* Cambiado de column a row para ponerlos en paralelo */
+    gap: 20px;
+    width: 100%;
+}
+
+.arch-card {
+    flex: 1;
+    /* Hace que ambas tarjetas ocupen exactamente el mismo ancho (50% cada una) */
+    background: var(--bg-light);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+}
+
+.arch-placeholder {
+    background: #e2e8f0;
+    color: #94a3b8;
+    border-radius: 8px;
+    border: 2px dashed #cbd5e1;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Regla para celulares: si la pantalla es chica, se vuelven a poner uno abajo del otro */
+@media (max-width: 768px) {
+    .architecture-comparison {
+        flex-direction: column;
+    }
+}
+
+/* --- Arquitectura Comparativa (Texto arriba, Tarjetas lado a lado) --- */
+.story-block.stacked {
+    flex-direction: column;
+    /* Fuerza a que el texto vaya arriba y las imágenes abajo */
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+}
+
+.story-text-full {
+    width: 100%;
+}
+
+.architecture-comparison {
+    display: flex;
+    flex-direction: row;
+    /* Pone las dos tarjetas en paralelo */
+    gap: 20px;
+    width: 100%;
+}
+
+.arch-card {
+    flex: 1;
+    /* Obliga a que cada tarjeta ocupe exactamente el 50% del espacio disponible */
+    background: var(--bg-light);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.arch-placeholder {
+    background: #e2e8f0;
+    color: #94a3b8;
+    border-radius: 8px;
+    border: 2px dashed #cbd5e1;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* En celulares se desarma el paralelo para que no se vea apretado */
+@media (max-width: 768px) {
+    .architecture-comparison {
+        flex-direction: column;
+    }
+}
