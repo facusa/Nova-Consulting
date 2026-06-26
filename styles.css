@@ -1520,4 +1520,8 @@ footer p {
     .architecture-comparison {
         flex-direction: column;
     }
+    
+    .arch-placeholder img {
+        max-width: 300px;
+    }
 }
