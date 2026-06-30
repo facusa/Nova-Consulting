@@ -1520,8 +1520,209 @@ footer p {
     .architecture-comparison {
         flex-direction: column;
     }
-    
+
     .arch-placeholder img {
         max-width: 200px;
     }
+}
+
+/* --- ESTILOS NUEVOS PARA EL CASO DE ÉXITO NARRADO --- */
+
+/* Navegación interna del caso */
+.case-nav-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 32px;
+    overflow-x: auto;
+}
+
+.case-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    min-width: max-content;
+}
+
+.case-nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: var(--transition-fast);
+}
+
+.case-nav a:hover {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--primary-color);
+}
+
+/* Tarjetas SMART Goals */
+.smart-goals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+    width: 100%;
+}
+
+.smart-card {
+    background: #ffffff;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+}
+
+.smart-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.smart-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.smart-card h4 {
+    font-size: 14px;
+    color: var(--text-main);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.smart-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Línea de tiempo / Metodología */
+.methodology-timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+    width: 100%;
+}
+
+.method-step {
+    background: #f1f5f9;
+    color: var(--text-muted);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #cbd5e1;
+    text-align: center;
+}
+
+.method-step.highlight-step {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+}
+
+.method-arrow {
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+/* Alert de Gap Analysis */
+.gap-alert {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.02));
+    border-left: 4px solid var(--primary-color);
+    padding: 16px 20px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Contenedor comparativo RFP y CTP */
+.rfp-results-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .rfp-results-container {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.tco-container {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.tco-container h4 {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: var(--text-main);
+    text-align: center;
+}
+
+.tco-bar-group {
+    margin-bottom: 16px;
+}
+
+.tco-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-muted);
+}
+
+.tco-bar {
+    height: 36px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    transition: width 1s ease-in-out;
+}
+
+.chatwoot-bar {
+    background: var(--primary-color);
+}
+
+.hubspot-bar {
+    background: #94a3b8;
+}
+
+/* Cierre / Conclusión */
+.closing-statement {
+    background: rgba(15, 23, 42, 0.03);
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    padding: 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    color: var(--text-main);
+}
+
+/* Ajustes de utilidad adicionales */
+.text-center {
+    text-align: center;
 }
