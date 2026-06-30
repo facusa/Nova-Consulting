@@ -282,7 +282,7 @@
                     Credenciales incorrectas.</p>
             </div>
         </div>
-        
+
         <!-- 4. Caso de Éxito: Full Basics -->
         <section id="entregables" class="section" style="display: none;">
             <div class="container">
@@ -291,21 +291,28 @@
                     <div class="section-line"></div>
                 </div>
 
+                <div class="case-nav-container">
+                    <ul class="case-nav">
+                        <li><a href="#ce-cliente">1. El Cliente</a></li>
+                        <li><a href="#ce-desafio">2. Desafío y Objetivos</a></li>
+                        <li><a href="#ce-metodologia">3. Metodología</a></li>
+                        <li><a href="#ce-arquitectura">4. Arquitectura</a></li>
+                        <li><a href="#ce-brechas">5. Brechas</a></li>
+                        <li><a href="#ce-seleccion">6. Selección</a></li>
+                        <li><a href="#ce-solucion">7. La Solución</a></li>
+                    </ul>
+                </div>
+
                 <div class="story-container glass-panel">
-                    <div class="story-block">
+
+                    <div id="ce-cliente" class="story-block">
                         <div class="story-text">
-                            <div class="badge">EL CLIENTE Y SU DESAFÍO</div>
-                            <h3>De la gestión manual a la omnicanalidad</h3>
-                            <p><strong>Full Basics</strong> es una PyME nacional de indumentaria textil con base en
-                                CABA. Con un equipo de 15 personas y talleres propios, se enfrentaban a un límite de
-                                crecimiento: la gestión manual.</p>
-                            <ul class="story-list">
-                                <li><strong>Dolores:</strong> Procesos no estandarizados, información de clientes
-                                    dispersa y falta de trazabilidad en la producción.</li>
-                                <li><strong>Objetivo SMART:</strong> Aumentar un 25% las ventas minoristas y mayoristas
-                                    en 12 meses, centralizando el 100% de la información operativa y estandarizando los
-                                    procesos.</li>
-                            </ul>
+                            <div class="badge">1. EL CLIENTE</div>
+                            <h3>Full Basics: Operación minorista y mayorista</h3>
+                            <p><strong>Full Basics</strong> es una PyME textil ubicada en CABA, conformada por un equipo
+                                de 12 a 15 personas. Operan tanto en el segmento minorista como mayorista, gestionando
+                                sus ventas a través de un showroom físico, Tiendanube y canales conversacionales como
+                                WhatsApp.</p>
                         </div>
                         <div class="story-image">
                             <img src="fullbasics.png" alt="Logo Full Basics" class="client-logo-large">
@@ -314,76 +321,189 @@
 
                     <hr class="story-divider">
 
-                    <div class="story-block stacked">
-                        <div class="story-text-full">
-                            <div class="badge">ARQUITECTURA Y BRECHAS</div>
-                            <h3>Análisis AS-IS y TO-BE</h3>
-                            <p>Utilizando el framework <strong>TOGAF</strong>, mapeamos la arquitectura empresarial
-                                origen. Descubrimos que la innovación estaba desbalanceada: tenían buenas ventas online,
-                                pero un backoffice dependiente de WhatsApp y libretas.</p>
-                            <p><strong>La Brecha (Gap Analysis):</strong> Faltaba un eslabón central que unificara el
-                                ERP actual (Ninox) con la atención al cliente (Tiendanube/Redes).</p>
+                    <div id="ce-desafio" class="story-block center-block">
+                        <div class="badge">2. EL DESAFÍO Y LOS OBJETIVOS</div>
+                        <h3>El límite de la gestión manual</h3>
+                        <p class="lead-text">La empresa se enfrentaba a dolores críticos que frenaban su crecimiento:
+                            procesos no estandarizados, información operativa y de clientes altamente dispersa, falta de
+                            trazabilidad y una fuerte dependencia del conocimiento centralizado en el dueño.</p>
+
+                        <div class="smart-goals-grid">
+                            <div class="smart-card">
+                                <div class="smart-icon">📈</div>
+                                <h4>Ventas</h4>
+                                <p>+25% en ventas minoristas y mayoristas en 12 meses.</p>
+                            </div>
+                            <div class="smart-card">
+                                <div class="smart-icon">🗄️</div>
+                                <h4>Información</h4>
+                                <p>Centralizar el 100% de la información operativa en 6 meses.</p>
+                            </div>
+                            <div class="smart-card">
+                                <div class="smart-icon">⚙️</div>
+                                <h4>Procesos</h4>
+                                <p>Estandarizar el 90% de los procesos en 8 meses.</p>
+                            </div>
+                            <div class="smart-card">
+                                <div class="smart-icon">💰</div>
+                                <h4>Costos</h4>
+                                <p>Base de proveedores con -15% de costos de producción.</p>
+                            </div>
+                            <div class="smart-card">
+                                <div class="smart-icon">🚀</div>
+                                <h4>Escalabilidad</h4>
+                                <p>Escalar +30% la operación general.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="story-divider">
+
+                    <div id="ce-metodologia" class="story-block center-block">
+                        <div class="badge">3. CÓMO LO ABORDAMOS</div>
+                        <h3>Contexto Metodológico</h3>
+                        <p class="lead-text">Para garantizar una transformación ordenada, combinamos dos marcos de
+                            trabajo clave. Usamos <strong>TOGAF</strong> para mapear la arquitectura actual (AS-IS) y
+                            proyectar la arquitectura de destino (TO-BE), y el <strong>Modelo de Doblin</strong> para
+                            identificar oportunidades concretas de innovación en procesos, estructura, redes y marca.
+                        </p>
+
+                        <div class="methodology-timeline">
+                            <div class="method-step"><span>Relevamiento & Diagnóstico</span></div>
+                            <div class="method-arrow">➔</div>
+                            <div class="method-step"><span>Arquit. Origen & Innovación</span></div>
+                            <div class="method-arrow">➔</div>
+                            <div class="method-step"><span>Arquit. Destino & Brechas</span></div>
+                            <div class="method-arrow">➔</div>
+                            <div class="method-step"><span>RFI / RFP & Selección</span></div>
+                            <div class="method-arrow">➔</div>
+                            <div class="method-step highlight-step"><span>Recomendación</span></div>
+                        </div>
+                    </div>
+
+                    <hr class="story-divider">
+
+                    <div id="ce-arquitectura" class="story-block stacked">
+                        <div class="story-text-full text-center">
+                            <div class="badge">4. ARQUITECTURAS</div>
+                            <h3>Del Origen al Destino</h3>
+                            <p>En el diagnóstico (<strong>AS-IS</strong>) detectamos que, si bien el frente comercial
+                                estaba digitalizado (NinoxNet, Tiendanube, IA, AFIP), el back-office dependía de tareas
+                                completamente manuales. La solución (<strong>TO-BE</strong>) plantea una evolución donde
+                                un <strong>CRM omnicanal con IA</strong> actúa como pieza central de la operación,
+                                conectando el negocio, las aplicaciones, los datos y la tecnología.</p>
                         </div>
 
                         <div class="architecture-comparison">
                             <div class="arch-card">
                                 <h4>Arquitectura Origen (AS-IS)</h4>
-                                <div class="arch-placeholder"><img src="origen.png" alt=""></div>
+                                <div class="arch-placeholder"><img src="origen.png" alt="Arquitectura Origen"
+                                        style="width: 100%; border-radius: 8px;"></div>
+                            </div>
+                            <div class="arch-card">
                                 <h4>Arquitectura Destino (TO-BE)</h4>
-                                <div class="arch-placeholder"><img src="destino.png" alt=""></div>
+                                <div class="arch-placeholder"><img src="destino.png" alt="Arquitectura Destino"
+                                        style="width: 100%; border-radius: 8px;"></div>
                             </div>
                         </div>
                     </div>
 
                     <hr class="story-divider">
 
-                    <div class="story-block">
+                    <div id="ce-brechas" class="story-block">
                         <div class="story-text">
-                            <div class="badge">BENCHMARKING Y RFP</div>
-                            <h3>Selección de Tecnología SaaS</h3>
-                            <p>Para cerrar las brechas, evaluamos múltiples CRM del mercado. Descartamos Zendesk y
-                                Freshdesk por sus altos costos, llegando a una final técnica y económica entre
-                                <strong>HubSpot Service Hub</strong> y <strong>Chatwoot</strong>.
-                            </p>
-                            <p>Evaluamos criterios Funcionales (35%), Técnicos (25%), Económicos (25%) y de Proveedor
-                                (15%).</p>
-                        </div>
-                        <div class="story-rfp-stats">
-                            <div class="rfp-winner">
-                                <h4>🏆 Ganador: Chatwoot</h4>
-                                <div class="score">78 / 100 pts</div>
-                                <p>Elegido por su menor CTP/CTS (Costo Total de Propiedad), flexibilidad Open-Source y
-                                    fácil integración con IA.</p>
-                            </div>
-                            <div class="rfp-loser">
-                                <h4>HubSpot</h4>
-                                <div class="score">69 / 100 pts</div>
-                                <p>Descartado por su modelo de licenciamiento por usuario, encareciendo el flujo de
-                                    fondos a 3 años.</p>
+                            <div class="badge">5. ANÁLISIS DE BRECHAS</div>
+                            <h3>Priorizando el CRM</h3>
+                            <p>La matriz de brechas evidenció necesidades urgentes: centralizar la información, mejorar
+                                la trazabilidad, estandarizar el seguimiento de clientes y reducir la pérdida de
+                                información. Entre todos los proyectos contemplados, <strong>se priorizó la
+                                    implementación del CRM</strong> por ofrecer la mayor cobertura de brechas, un
+                                impacto directo en el negocio y servir como base estructurada para futuras
+                                automatizaciones.</p>
+
+                            <div class="gap-alert">
+                                <strong>💡 Cómo cubrimos el Gap:</strong> El CRM elegido está orientado a la
+                                omnicanalidad y al guardado de las conversaciones, no a ser un CRM clásico con base de
+                                datos estructurada de contactos. Este gap se cubre complementándolo con una capa de
+                                ofimática colaborativa en la nube, alimentada automáticamente por las integraciones
+                                propias de la nueva arquitectura.
                             </div>
                         </div>
                     </div>
 
                     <hr class="story-divider">
 
-                    <div class="story-block center-block">
-                        <div class="badge">LA SOLUCIÓN NOVA</div>
-                        <h3>Innovación Incremental e IA</h3>
-                        <p class="lead-text">Basándonos en el Modelo de Doblin, propusimos una innovación en la
-                            Configuración (Procesos y Redes) y Experiencia (Marca).</p>
+                    <div id="ce-seleccion" class="story-block stacked">
+                        <div class="story-text-full text-center">
+                            <div class="badge">6. BENCHMARKING</div>
+                            <h3>Selección de Tecnología SaaS</h3>
+                            <p>En la fase RFI evaluamos 4 soluciones de CRM omnicanal. Descartamos Zendesk y Freshdesk
+                                por costos, pasando a RFP con <strong>Chatwoot y HubSpot</strong>. Se analizaron
+                                criterios funcionales, técnicos, económicos y de proveedor.</p>
+                        </div>
 
-                        <div class="nova-sol-grid">
-                            <div class="nova-sol-card">
-                                <h4>CRM Omnicanal Integrado</h4>
-                                <p>Despliegue de Chatwoot para unificar WhatsApp, Instagram y Tiendanube, eliminando la
-                                    dispersión.</p>
+                        <div class="rfp-results-container">
+                            <div class="story-rfp-stats">
+                                <div class="rfp-winner">
+                                    <h4>🏆 Chatwoot</h4>
+                                    <div class="score">78 / 100</div>
+                                    <p>Superior por su menor costo total de propiedad, flexibilidad y facilidad de
+                                        integración.</p>
+                                </div>
+                                <div class="rfp-loser">
+                                    <h4>HubSpot</h4>
+                                    <div class="score">69 / 100</div>
+                                    <p>Descartado por un modelo de licenciamiento que encarecía el flujo de fondos a
+                                        largo plazo.</p>
+                                </div>
                             </div>
-                            <div class="nova-sol-card">
-                                <h4>Agentes de IA</h4>
-                                <p>Automatización de la captura de precios de proveedores y guionización de contenido
-                                    para redes sociales.</p>
+
+                            <div class="tco-container">
+                                <h4>Costo Total de Propiedad (CTP) a 3 años</h4>
+                                <div class="tco-bar-group">
+                                    <span class="tco-label">Chatwoot</span>
+                                    <div class="tco-bar chatwoot-bar" style="width: 55%;">USD 9.062</div>
+                                </div>
+                                <div class="tco-bar-group">
+                                    <span class="tco-label">HubSpot</span>
+                                    <div class="tco-bar hubspot-bar" style="width: 100%;">USD 16.650</div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+
+                    <hr class="story-divider">
+
+                    <div id="ce-solucion" class="story-block center-block">
+                        <div class="badge">7. LA SOLUCIÓN NOVA Y CONCLUSIÓN</div>
+                        <h3>Innovación y Beneficios Esperados</h3>
+                        <p class="lead-text">Planteamos un <strong>CRM omnicanal con IA</strong> como núcleo de la
+                            transición digital de Full Basics, que a futuro será complementado por un tablero kanban de
+                            producción, gestión documental de procedimientos, automatización de precios con IA y
+                            guionización de contenido.</p>
+
+                        <div class="nova-sol-grid" style="margin-bottom: 32px;">
+                            <div class="nova-sol-card">
+                                <h4>Centralización y Trazabilidad</h4>
+                                <p>Unificamos la información dispersa y capturamos el conocimiento que antes dependía de
+                                    una sola persona.</p>
+                            </div>
+                            <div class="nova-sol-card">
+                                <h4>Escalabilidad Inteligente</h4>
+                                <p>Permite al equipo crecer operativamente un +30% sin la necesidad de sumar nueva
+                                    estructura de personal.</p>
+                            </div>
+                        </div>
+
+                        <div class="closing-statement">
+                            <p><strong>El resultado:</strong> Full Basics moderniza su núcleo operativo con una solución
+                                viable y económicamente accesible para una PyME, construyendo una base tecnológica
+                                sólida para su próxima etapa de expansión comercial.</p>
+                        </div>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="#entregables" class="btn-linkedin">Volver al inicio del caso</a>
                     </div>
 
                 </div>
